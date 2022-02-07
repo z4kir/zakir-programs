@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <style type="text/css">
+        body, td, th {
+            background-color: #000000;
+        }
+
+        body {
+            background-color: #F0F0F0;
+        }
+
+        .style1 {
+            font-family: Arial;
+            font-size: 14px;
+            padding: 12px;
+            line-height: 25px;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+
+        .style2 {
+            font-family: Arial;
+            font-size: 17px;
+            padding: 12px;
+            line-height: 25px;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <table width="100%" height="100%" border="0" cellpadding="0" align="centre">
+        <tr>
+            <td align="centre" valign="middle">
+                <table class="table-bordered" width="350" border="0" cellpadding="3" cellspacing="3" bgcolor="#FFFFFF">
+                    <from action="#" th:action="@{/login}" th:object="${user}" method="post">
+
+                        <tr>
+                            <td height="25" colspan="2" align="left" valign="middle" bgcolor="#5f9ea0" class="style1">
+                                <div align="center">
+                                    <strong>Login</strong>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Username</td>
+                            <td>
+                                <input class="form-control" th:field="*{username}" type="text">
+                            </td>
+
+                            <td>Password</td>
+                            <td><input type="password" th:field="*{password}" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <button type="submit" class="btn btn-info">Login</button>
+                            </td>
+                        </tr>
+                    </from>
+
+                </table>
+
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+</body>
+</html>

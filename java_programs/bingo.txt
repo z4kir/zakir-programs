@@ -1,0 +1,252 @@
+
+
+
+import java.util.*;
+// import java.lang.*;
+import matrix.*;
+
+public class Bingo{
+    public int[] getIndexOf(String strings[][],String item){
+        int i,j;
+        int q=0;
+        int b[]=new int[2];
+        
+        for (i=0; i<5; i++){
+            for(j=0;j<5; j++) {
+            if (item.equals(strings[i][j])){
+                b[0]=i;
+                b[1]=j;
+                return b;
+              
+            }  
+        }
+    }
+        
+    b[0]=-1;
+    b[1]=-1; 
+    return b;
+}
+    public static void  main(String...args){
+        int i,j;
+        int c=1;
+        String p;
+        String b[][]= new String[5][5];
+        for(i=0;i<5;i++){
+           
+            for(j=0;j<5;j++){
+
+                p=String.valueOf(c);
+                b[i][j]=p;
+                if(c<11){
+            System.out.print(b[i][j]+"      ");
+                }
+                else{
+                    System.out.print(b[i][j]+"     ");
+                }
+              
+            c++;
+            }
+            System.out.println();
+            
+        }
+        System.out.println("enter total no. of player");
+        Scanner z = new Scanner(System.in);
+        int n=z.nextInt();
+        String a[]=new String[n];
+        String a1[]=new String[n];
+        String a2[]=new String[n];
+        String a3[]=new String[n];
+        int m=1;
+        int nz=1;
+        Scanner z1 = new Scanner(System.in);
+
+       for(i=0;i<n;i++){
+            System.out.println("enter player "+nz+" name:" );
+            a1[i]=z1.nextLine();
+            System.out.println("enter player "+m+" digit" );
+            a[i]=z1.nextLine();
+            System.out.println("\n\n" );
+            nz++;
+            m++;
+        }
+        // for(i=0;i<n;i++){
+        //     System.out.println("player digits are "+a[i] );
+        // }
+        m=1;
+        Scanner g=new Scanner(System.in);
+        int s1=1;
+        int k2=1;
+        int c1=0;
+        int i1;
+      outerloop:  while (s1<25) {
+        for(i1=0;i1<n;i1++){
+        //   for(m1=1;m1<=n;m1++){
+            if(c1==(n-1)){
+                break outerloop;
+
+            }
+              
+              
+      
+            System.out.println("player "+k2+" enter no. ");
+            int x1=g.nextInt();
+           String x=Integer.toString(x1);
+        //    if(b[][].equals("* ")){
+        //     System.out.println("already inserted value please insert again ");
+        //     continue outerloop;
+               
+        //    }
+            if (a[k2-1].equals(x)) {
+
+                System.out.println("You don't cut your number");
+                continue outerloop;
+                
+            }
+            if(x1>25){
+                System.out.println("value is greater than 25 please insert again");
+                continue outerloop;
+            } 
+            
+            // String x1=" ";
+           Bingo h=new Bingo();
+           int l[]=h.getIndexOf(b,x);
+          
+
+           
+        //    System.out.println("position of enterd string \nrow:"+l[0]+"\ncolunm:"+l[1]);
+           int n1=l[0];
+           int n2=l[1];
+           if(n1==-1&&n2==-1){
+            System.out.println("already inserted value please insert again ");
+            continue outerloop;
+           }
+               
+
+           
+
+        //    if(b[n1][n2].equals("* ")||b[n1][n2].equals("*")){
+
+        //     System.out.println("already inserted value please insert again ");
+        //     // k2=k2;
+        //     continue outerloop;
+
+        //    }
+
+        if(x1<11){
+          
+           b[n1][n2]="*";
+            }
+            else{
+                b[n1][n2]="* ";
+
+            }
+
+           
+        //    int i1,j1;
+        int k,k1;
+        
+           for(i=0;i<5;i++){
+            for(j=0;j<5;j++){
+                if(i<2){
+                    System.out.print(b[i][j]+"      ");
+
+                }
+            else {
+                System.out.print(b[i][j]+"     ");
+            }
+            }
+            System.out.println();
+            }
+        //    for(k=1;k<=n;k++){
+            
+        //     for(k1=2;k<=n-1;k++){
+        //         if((a[k1-1].equals(x))&&(a[k-1].equals(x))){
+        //             System.out.println("player "+ k+" & "+k1+ " won");
+                
+        //         break outerloop;
+        //         }
+        //     }
+        // }
+       int s2=0;
+       int y,u;
+       int flag=0;
+       b: while(s2<n){
+        if(a[s2].equals(x)){
+            for(k=1;k<=n;k++){
+            if(a[k-1].equals(x)){
+                
+                System.out.println( a1[k-1]+ " win");
+               c1++;
+               a2[i1]=a1[k-1];
+
+             
+
+            }
+        }
+            }
+            
+        
+        // System.out.println( a2[i1]);
+        // break b;
+        
+
+    
+    else { if(c1==(n-1)){
+        
+        for(y=0;y<n;y++){
+            for(u=0;u<n;u++){
+                if (a1[y].equals(a2[u])) {
+                    
+                    flag++;
+                    break;
+                } 
+            }
+            if(flag==0){
+                a2[n-1]=a1[y];
+                // System.out.println( a1[y] + "  " +a2[n-1] );
+                break b;
+
+            }
+            flag=0;
+        }
+        
+    }
+    
+
+    
+    }
+    s2++;
+}
+k2++;
+if(k2>n){
+    k2=1;
+
+          }
+      
+       
+        s1++;
+           }
+        }
+           for(i1=0;i1<n;i1++){
+
+               if(i1==(n-1)){
+                System.out.println( (i1+1)+"."+a2[i1]+"lose"); 
+
+            
+               }
+               else{
+                System.out.println((i1+1)+"."+a2[i1]+"win");
+                
+               }
+
+           }
+        
+           if(s1==25){
+            System.out.println("all the players are the winner");
+           }
+        // }
+    
+    }
+}
+
+        

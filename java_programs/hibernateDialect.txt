@@ -1,0 +1,2 @@
+MySQL:org.hibernate.dialect.MySQL8Dialect
+PostgreSQL:org.hibernate.dialect.PostgreSQLDialect

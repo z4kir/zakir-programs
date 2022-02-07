@@ -1,0 +1,20 @@
+.root {
+    -fx-background-color: rgb(25, 129, 95);
+    -fx-border-top: 2cm;
+
+}
+
+.label {
+    -fx-background-color: rgb(248, 248, 248);
+
+}
+
+.button {
+    -fx-background-color: rgb(16, 63, 34);
+    -fx-text-fill: aliceblue;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+
+}
+
+    

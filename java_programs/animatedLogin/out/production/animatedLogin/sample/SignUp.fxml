@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0"
+      prefWidth="300.0" style="-fx-background-color: #483d8b;" xmlns="http://javafx.com/javafx/8.0.171"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <HBox alignment="TOP_RIGHT" prefHeight="143.0" prefWidth="300.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#minimize" prefHeight="20.0" prefWidth="20.0"
+                        style="-fx-background-color: transparent;">
+                    <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@minus.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#close" prefHeight="20.0" prefWidth="20.0"
+                        style="-fx-background-color: transparent;">
+                    <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@cancel.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </HBox>
+        <Label text="Sign Up" textFill="#6fabe7">
+            <VBox.margin>
+                <Insets left="10.0"/>
+            </VBox.margin>
+            <font>
+                <Font size="22.0"/>
+            </font>
+        </Label>
+        <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: transparent;">
+            <children>
+                <TextField promptText="Full Name"
+                           style="-fx-background-color: transpaernt; -fx-border-color: #6fabe7; -fx-border-width: 0px 0px 1px 0px; -fx-text-fill: white;"
+                           HBox.hgrow="ALWAYS">
+                    <opaqueInsets>
+                        <Insets/>
+                    </opaqueInsets>
+                    <HBox.margin>
+                        <Insets/>
+                    </HBox.margin>
+                </TextField>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: transparent;">
+            <children>
+                <TextField fx:id="sing_up_tf_Email" promptText="Email"
+                           style="-fx-background-color: transpaernt; -fx-border-color: #6fabe7; -fx-border-width: 0px 0px 1px 0px; -fx-text-fill: white;"
+                           HBox.hgrow="ALWAYS">
+                    <opaqueInsets>
+                        <Insets/>
+                    </opaqueInsets>
+                    <HBox.margin>
+                        <Insets/>
+                    </HBox.margin>
+                </TextField>
+                <ImageView disable="true" fitHeight="25.0" fitWidth="25.0" focusTraversable="true" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@585e4bcdcb11b227491c3396.png"/>
+                    </image>
+                </ImageView>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: transparent;">
+            <children>
+                <TextField fx:id="sing_up_tf_Password" promptText="Password"
+                           style="-fx-background-color: transpaernt; -fx-border-color: #6fabe7; -fx-border-width: 0px 0px 1px 0px; -fx-text-fill: white;"
+                           HBox.hgrow="ALWAYS">
+                    <opaqueInsets>
+                        <Insets/>
+                    </opaqueInsets>
+                    <HBox.margin>
+                        <Insets/>
+                    </HBox.margin>
+                </TextField>
+                <ImageView disable="true" fitHeight="25.0" fitWidth="25.0" focusTraversable="true" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@padlock-256.png"/>
+                    </image>
+                    <HBox.margin>
+                        <Insets bottom="10.0"/>
+                    </HBox.margin>
+                    <effect>
+                        <ColorAdjust brightness="0.76" contrast="-0.52" hue="-0.07" saturation="0.26"/>
+                    </effect>
+                </ImageView>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: transparent;">
+            <children>
+                <Button mnemonicParsing="false" onAction="#signUp" prefHeight="32.0" prefWidth="310.0"
+                        style="-fx-background-color: #6fabe7; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-text-fill: white; -fx-border-image-width: 3px;"
+                        text="Sign In">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+    </children>
+</VBox>

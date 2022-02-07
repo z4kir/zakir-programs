@@ -1,0 +1,29 @@
+    public void move(KeyEvent event){
+            System.out.println("ri.....");
+        switch (event.getCode()){
+            case P:
+                System.out.println("hey.....");
+                break;
+
+            case RIGHT:
+                if (rect1.getX()+50 < 600 ) {
+                    System.out.println("right.....");
+                TranslateTransition rect1T=new TranslateTransition(Duration.seconds(2),rect1);
+                rect1T.setToX(rect1.getX() + 20);
+                rect1T.play();
+//                    rect1.setX(rect1.getX()+20);
+                }
+                break;
+
+
+            case L:
+                    if (rect1.getX() > 0) {
+                        System.out.println("left.....");
+                        TranslateTransition rect1T=new TranslateTransition(Duration.seconds(2),rect1);
+                        rect1T.setToX(rect1.getX() - 20);
+                        rect1T.play();
+                    }
+                        break;
+
+            }
+        }

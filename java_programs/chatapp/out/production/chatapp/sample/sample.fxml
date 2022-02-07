@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" prefHeight="54.0" prefWidth="300.0" BorderPane.alignment="BOTTOM_RIGHT">
+            <children>
+                <TextField prefHeight="25.0" prefWidth="239.0"/>
+                <Button mnemonicParsing="false" prefHeight="22.0" prefWidth="58.0" text="send">
+                    <HBox.margin>
+                        <Insets right="2.0"/>
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+    </bottom>
+    <center>
+        <TextArea prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER"/>
+    </center>
+</BorderPane>
